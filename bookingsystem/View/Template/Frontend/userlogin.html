@@ -1,0 +1,56 @@
+<center style ="
+    border: solid 2px lightslategrey;
+    height: 200px;
+    width: 430px;
+    margin-left: 470px;
+    background-color: rgba(86, 106, 123, 0.7);
+    border-radius: 16px;
+    padding-top: 16px;
+"  >
+<h3 class="title"> USER LOGIN </h3>
+ <form  method="POST"> 
+     <table>
+            <tr>
+                <td style="color: lightgray;">USER NAME</td>
+                    <td><input type="text"  value="{EMAIL}" name="userName" />
+                </td>
+            </tr>
+
+            <tr>
+                <td style="color: lightgray;">PASSWORD</td>
+                    <td><input type="password"  value="" name="password"/>
+                </td>
+            </tr>
+          
+     
+            <tr>
+                <td>
+                    <input type="submit"   value="login" name="login" />     
+                </td>
+            </tr>
+        </table>
+           <table>
+            <tr>           
+            <span style="color: blue;">Forgot Your Password</span> <a href="http://www.busbooking.local/?module=login&act=forget" class="link"><span>Forgot Password</span></a><br>
+                
+            </tr>
+            <tr>
+                 <span style="color: blue;">Create an account</span> <a href="http://www.busbooking.local/?module=login&act=signup" class="link"><span>Sign UP</span></a>
+            </tr>
+           </table>
+            <table>
+            <tr>
+             <span  style="color: red;">{ERROR_MESSAGE}</span>
+            </tr>
+            <tr>
+                <span  style="color: green;">{SUCESS_MESSAGE}</span>
+            </tr>
+        
+            <tr>
+                 <span  style="color: green;">{SUCESS}</span>
+            </tr>
+        
+          </table>
+
+</form>
+</center>

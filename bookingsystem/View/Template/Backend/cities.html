@@ -1,0 +1,45 @@
+<center style ="
+    border: solid 2px lightslategrey;
+    padding-top: 16px;
+    width: 60%;
+    margin-left: 274px;
+    background-color: rgba(86, 106, 123, 0.7);
+    border-radius: 16px;
+"  >
+        <table width="70%" border="1">
+            <tr>
+            <th style="color: white;">ID</th>
+            <th style="color: white;">City Name</th>
+            <th style="color: white;">EDIT</th>
+            <th style="color: white;">DELETE</th>
+            </tr>
+                <!-- BEGIN city_data -->
+           
+            <tr>
+                <td style="color: white;">{ID}</td>
+                <td style="color: white;">{CITY}</td>
+                 <td> 
+                    <a href="http://www.busbooking.local/admin/?module=settings&act=editcity&id={ID}" class="hvr"><span>Edit</span></a>                
+                </td>
+                <td> 
+                               
+                    <a href="http://www.busbooking.local/admin/?module=settings&act=deletecity&id={ID}" class="hvr" onclick="return checkDelete()">Delete</a>
+                </td>
+            </tr>
+            <tr>
+             
+          
+            </tr>
+                <!-- END city_data -->
+             <p style="color:green;">{SUCESS} </p> 
+            <p style="color:green;"> {DELETE} </p>
+        </table>
+    <table>
+            <tr>  
+                <td>
+                    <span style="color: white;">ADD NEW CITY</span> <a href="http://www.busbooking.local/admin/?module=settings&act=addcity" class="hvr"><span>add city</span></a>
+                
+                </td>
+            </tr>
+            </table>
+</center>

@@ -1,0 +1,65 @@
+
+<center style ="
+    border: solid 2px lightslategrey;
+    padding-top: 16px;
+    width: 60%;
+    margin-left: 274px;
+    background-color: rgba(86, 106, 123, 0.7);
+    border-radius: 16px;
+"  >
+        <table width="70%" border="1">
+            <tr>
+            <th style="color: white;">ID</th>
+            <th style="color: white;">Route Name</th>
+            <th style="color: white;">Source</th>
+            <th style="color: white;">Destination</th>
+            <th style="color: white;">Boarding</th>
+            <th style="color: white;">starting Time</th>
+            <th style="color: white;">Journey Time</th>
+            <th style="color: white;">Price</th>
+            <th style="color: white;">Edit</th>
+            <th style="color: white;">Delete</th>
+            </tr>
+                <!-- BEGIN data -->
+           
+            <tr>
+                <td style="color: white;">{ID}</td>
+                <td style="color: white;">{ROUTE}</td>
+                <td style="color: white;">{SOURCE}</td>
+                <td style="color: white;">{DESTINATION}</td>
+                <td style="color: white;">{BOARDING}</td>
+                <td style="color: white;">{STARTING}</td>
+                <td style="color: white;">{JOURNEY_TIME}</td>
+                <td style="color: white;">{PRICE}</td>
+                <td> 
+                    <a href="http://www.busbooking.local/admin/?module=settings&act=edit&id={ID}" class="hvr"><span>Edit</span></a>
+
+                </td>
+                <td> 
+                               
+                    <a href="http://www.busbooking.local/admin/?module=settings&act=delete&id={ID}" class="hvr" onclick="return checkDelete()">Delete</a>
+                </td>
+            </tr>
+                
+            <tr>
+            
+       
+            
+            </tr>
+            <!-- END data -->
+            <tr>
+            
+            <p style="color:green;">{SUCESS} </p> 
+            <p style="color:green;">{DELETE} </p> 
+            
+            </tr>
+        </table>
+    <table>
+            <tr>  
+                <td>
+                    <span style="color: white;">ADD NEW ROUTE</span> <a href="http://www.busbooking.local/admin/?module=settings&act=addroute" class="hvr"><span>add route</span></a>
+                
+                </td>
+            </tr>
+            </table>
+</center>

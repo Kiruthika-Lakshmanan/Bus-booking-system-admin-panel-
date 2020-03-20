@@ -1,0 +1,89 @@
+
+<center style ="
+    border: solid 2px lightslategrey;
+    width: 430px;
+    margin-left: 470px;
+    background-color: rgba(86, 106, 123, 0.7);
+    border-radius: 16px;
+    padding-top: 16px;
+"  >
+     <h3>ADD NEW BUS</h3>
+    <form  method="POST" > 
+        <table>
+            <tr>
+                <td style="color:white;font-family:arial;">BUS NUMBER</td>
+                <td><input type="text" value="{BUS_NUMBER}" name="busNumber" />
+                </td>
+            </tr>
+
+            <tr>
+                <td style="color:white;font-family:arial;">STATUS</td>
+                <td><input type="text" value="{STATUS}" name="status" />
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td style="color:white">COACH TYPE</td>
+                <td>
+                <select class="input-box" name="coach">
+                <option>Select...</option>
+                <!-- BEGIN show_coach -->
+                <option value="{COACH_ID}" {COACH_SELECTED}>{COACH_NAME}</option>
+                <!-- END show_coach -->
+            </select>
+                </td>    
+            </tr>
+
+             <tr>
+                 <td style="color:white">ROUTE</td>
+            <td>
+            <select class="input-box" name="route">
+                <option>Select...</option>
+                <!-- BEGIN show_route -->
+                <option value="{ROUTE_ID}" {ROUTE_SELECTED}>{ROUTE_NAME}</option>
+                <!-- END show_route -->
+            </select>
+            </td>
+             
+            </tr>
+           
+           
+            
+            
+            <tr>
+                <td style="color:white;font-family:arial;">RATING</td>
+                <td><input type="text" value="{RATING}" name="rating"/>
+                </td>
+            </tr>
+            
+           <tr>
+                 <td style="color:white">AGENCY</td>
+                <td>
+            <select class="input-box" name="agency">
+                <option>Select...</option>
+                <!-- BEGIN show_agency -->
+                <option value="{AGENCY_ID}"  {AGENCY_SELECTED}>{AGENCY_NAME}</option>
+                <!-- END show_agency -->
+            </select>
+           </td>
+               
+            </tr>
+            <tr>
+                <td style="color:white;font-family:arial;">
+                    <input type="submit" value="submit" name="submit" />
+                    
+                </td>
+            </tr>
+            <tr>
+                <td style="color:white; font-family:arial;">
+                    <input type="reset" value="reset" name="reset">
+                </td>
+            </tr>
+            <tr>
+            <p style="color:red;"> {ERROR_MESSAGE} </p>    
+            </tr>
+        </table>
+</form>
+</center>

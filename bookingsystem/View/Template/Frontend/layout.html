@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>BUS BOOKING SYSTEM</title>
+        <link type="text/css" rel="stylesheet" href="/View/Style/style.css">
+        <script language="JavaScript" type="text/javascript">
+            function checkDelete() {
+                return confirm('Do You Want to Delete the Details?');
+            }
+        </script>
+
+    </head>
+    <body class="{BACKGROUND_CLASS}">
+     <div class="row container-width">
+            <div class="col nav" >
+                <ul class="top" >
+                    <!-- BEGIN show_navigation -->
+                    <li class="navigation dropdown ">
+                        <a href="{NAVIGATION_LINK}" id = "{ACTIVE}">{NAVIGATION_TEXT}</a>
+                        <!-- BEGIN show_sub_navigation -->
+                        <ul>
+                            <!-- BEGIN show_sub_navigation_menu -->
+                            <li class="navigation dropdown sublist" id = "{ACTIVE}">
+                                <a href="{SUBNAVIGATION_LINK}">{SUBNAVIGATION_TEXT}</a>
+                            </li>
+                            <!-- END show_sub_navigation_menu -->
+                        </ul>
+                        <!-- END show_sub_navigation -->
+                    </li>
+                    <!-- END show_navigation -->
+                    <li class="navigation empty"></li>
+                </ul>
+            </div>
+     </div>
+        <div class="col layout">
+        {CONTENT}
+        </div>
+       
+    </body>
+</html>

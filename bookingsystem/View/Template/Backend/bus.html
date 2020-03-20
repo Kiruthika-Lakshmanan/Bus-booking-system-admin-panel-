@@ -1,0 +1,63 @@
+
+<center style ="
+    border: solid 2px lightslategrey;
+    padding-top: 16px;
+    width: 60%;
+    margin-left: 274px;
+    background-color: rgba(86, 106, 123, 0.7);
+    border-radius: 16px;
+"  >
+        <table width="70%" border="1">
+            
+            <tr>
+            <th style="color: white;">ID</th>
+            <th style="color: white;">Bus Number</th>
+            <th style="color: white;">Status</th>
+            <th style="color: white;">Coach Type</th>
+            <th style="color: white;">Route</th>
+            <th style="color: white;">Rating</th>
+            <th style="color: white;">Travel Agency</th>
+            <th style="color: white;">Edit</th>
+            <th style="color: white;">Delete</th>
+            <th style="color: white;">Details</th>
+            </tr>
+                <!-- BEGIN bus_data -->
+           
+            <tr>
+                <td style="color: white;">{ID}</td>
+                <td style="color: white;">{BUS_NUMBER}</td>
+                <td style="color: white;">{STATUS}</td>
+                <td style="color: white;">{COACH_TYPE}</td>
+                <td style="color: white;">{ROUTE}</td>
+                <td style="color: white;">{RATING}</td>
+                <td style="color: white;">{AGENCY}</td>
+                <td> 
+                    <a href="http://www.busbooking.local/admin/?module=bus&act=editbus&id={ID}" class="hvr"><span>Edit</span></a>
+
+                </td>
+                <td> 
+                               
+                    <a href="http://www.busbooking.local/admin/?module=bus&act=deletebus&id={ID}" class="hvr" onclick="return checkDelete()">Delete</a>
+                </td>
+                <td> 
+                               
+                    <a href="http://www.busbooking.local/admin/?module=bus&act=busdetails&id={ID}" class="hvr" >Details</a>
+                </td>
+            </tr>
+            <!-- END bus_data -->
+                 
+            <tr>
+            <p style="color:red;"> {ERROR_MESSAGE} </p> 
+            <p style="color:green;">{SUCESS} </p> 
+            <p style="color:green;">{DELETE} </p>
+            </tr>
+            <table>
+            <tr>  
+                <td>
+                    <span style="color: white;">ADD NEW BUS</span> <a href="http://www.busbooking.local/admin/?module=bus&act=addbus" class="hvr"><span>add bus</span></a>
+                
+                </td>
+            </tr>
+            </table>
+        </table>
+</center>

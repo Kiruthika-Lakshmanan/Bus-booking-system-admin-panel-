@@ -1,0 +1,93 @@
+
+<center style ="
+    border: solid 2px lightslategrey;
+    width: 430px;
+    margin-left: 470px;
+    background-color: rgba(86, 106, 123, 0.7);
+    border-radius: 16px;
+    padding-top: 16px;
+"  >
+    <h3>ADD NEW ROUTES</h3>
+    <form  method="POST" > 
+        <table>
+            <tr>
+                <td style="color:white;font-family:arial;">ROUTE NAME</td>
+                <td><input type="text" value="{ROUTE}" name="routeName" />
+                </td>
+            </tr>
+
+            <tr>
+                 <td style="color:white">SOURCE</td>
+                <td>
+            <select class="input-box" name="source">
+                <option>Select...</option>
+                <!-- BEGIN show_city -->
+                <option value="{SOURCE_ID}" {SOURCE_SELECTED}>{SOURCE_NAME}</option>
+                <!-- END show_city -->
+            </select>
+        </td>
+            </tr>
+
+
+            <tr>
+                <td style="color:white">DESTINATION</td>
+                <td>
+                  <select class="input-box"  name="destination">
+                <option>Select...</option>
+                <!-- BEGIN show_cities -->
+                <option value="{DESTINATION_ID}" {DESTINATION_SELECTED}>{DESTINATION_NAME}</option>
+                <!-- END show_cities -->
+            </select>
+            </td>
+            </tr>
+
+
+            <tr>
+                <td style="color:white;font-family:arial;">BOARDING POINT</td>
+                <td><input type="text" value="{BOARDING}" name="boarding"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="color:white;font-family:arial;">STARTING TIME</td>
+                <td><input type="time" name="starting" value="{STARTING}"
+                min="00:00" max="20:00" >
+                </td>
+            </tr>
+            <tr>
+                <td style="color:white;font-family:arial;">JOURNEY TIME</td>
+                <td><input type="time"  name="ending" value="{ENDING}"
+                min="00:00" max="20:00" >
+                </td>
+            </tr>
+
+
+            <tr>
+                <td style="color:white;font-family:arial;">PRICE</td>
+                <td>
+                    <input type="text" value="{PRICE}" name="price" />
+
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td style="color:white;font-family:arial;">
+                    <input type="submit" value="submit" name="submit" />
+                    
+                </td>
+            </tr>
+            <tr>
+                <td style="color:white; font-family:arial;">
+                    <input type="reset" value="reset" name="reset">
+                </td>
+            </tr>
+            <tr>
+            <p style="color:red;"> {ERROR_MESSAGE} </p> 
+            <p style="color:red;"> {ERROR} </p>
+            <p style="color:green;"> {SUCESS_MESSAGE} </p>    
+            </tr>
+        </table>
+</form>
+</center>

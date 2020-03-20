@@ -1,0 +1,38 @@
+<center style ="
+    border: solid 2px lightslategrey;
+    width: 450px;
+    margin-left: 470px;
+    background-color: rgba(86, 106, 123, 0.7);
+    border-radius: 16px;
+    padding-top: 16px;
+"  >
+    <h3 style="color: lightgray;">RESET FORM</h3>
+      
+        <form method="POST">
+            <table>
+                   
+                <tr>
+                    <td style="color: lightgray;">Enter Your Email-Id </td>
+                    <td><input type="text" value="{EMAIL}" name="email"/></td>  
+                </tr>
+                
+                <tr>
+                    <td style="color: lightgray;">Enter new password </td>
+                    <td><input type="password" name="new_password"/></td>  
+                </tr>
+                
+                <tr>
+                    <td style="color: lightgray;">confirm password </td>
+                    <td><input type="password" name="confirm_password"/></td>  
+                </tr>
+                
+                 <tr>
+                    <td><input type="submit" value="submit" name="submit"/></td>  
+                </tr>
+                 <tr>
+                    <td><span style="color: red;">{ERROR_MESSAGE}</span></td>
+                </tr>
+                
+            </table> 
+        </form>
+</center>
