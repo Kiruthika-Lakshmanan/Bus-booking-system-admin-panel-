@@ -2,22 +2,16 @@ BUS BOOKING SYSTEM
 
 FEATURES:
 1.admin panel
-   ->Dashboard:
-        customer 
-        travel agency->Buses,Routes.
-        Buses
-        Routes
-        Orders
+        Dashboard->previous bookings/current bookings.
+        travel agency->overview/add/edit/delete/details->list of buses with route.
+        Buses->overview/add/edit/delete/details->bues routes and agency.
+       
 2.settings
     route ->add/edit/delete of routes.
     cities->add/edit/delete of cities.
 
 #admin panel can be accessed only by admin...
   *The page starts from a login page where username,password can be entered to check the valid user.
-  *Before logging in creating a account is important...
-  *If admin not yet signed in,admin need to create a new account by clicking a link[create an account] form 
-   login page.
-  *Then admin need to fill all the details  and store it database named.
 
 DATABASE NAME      ->bus_booking
 TABLE NAME         ->admin
@@ -27,39 +21,5 @@ LOGIN PAGE         ->form
 FIELDS             ->user name,password.
 LINKS              ->create new account,forgot password.
 
-link[create new account] redirects to sing-in page.
-
-SIGN-IN PAGE       ->form
-FIELDS             ->name,age,gender,phone number,password,address,id.
-
-#After success full login of admin.the page redirects to dash board, dash board has navigation choices.Admin
-will select choices and proceed with that choice.
-
-DASHBOARD          ->choices..customer,travel agency,buses->routes,availability,orders.
-
-1.CUSTOMER         ->if admin chooses customer the page redirects to customer page.
-OPTIONS            ->customer orders,accessed from db,where db has user order info.
-FIELDS             ->page has customer info filled in a table,these info will be accessed from a database,
-                     where if a new user signed up those info will be stored in db. 
-FIELD customer     ->name,id,age,gender,Phone Number.
-FIELD orders       ->name,id,bus,booking date,start date,journey time,amount,id paid.
-
-DATABASE NAME      ->bus_booking
-TABLE NAME         ->customer,orders
-FIELDS customers   ->name,age,gender,phone number,password,id,orders.
-FIELDS orders      ->id,customer,bus,book date,journey time,amount,is paid.
- 
-2.TRAVEL AGENCIES  ->if admin chooses customer the page redirects to travel agencies pages.
-OPTIONS            ->add new,edit,save,delete,list of buses,routes.
-FIELDS             ->id,name,office address,phone number,list of buses.
-FIELDS list buses  ->id,bus number,coach type,status,rating,routes.
-FIELDS route       ->id,bus,source,destination,start time,journey time,boarding point,price.
-
-DATABASE NAME      ->bus_booking
-TABLE agencies     ->id,name,office address,phone number.
-TABLE buses        ->id,bus number,coach type,status,rating,routes,travel agencies.
-
-3.BUSES            ->if admin chooses buses,bus details will be displayed.
-4.Routes           ->if admin chooses routes,routes details will be displayed.
-
-5.SHOW BOOKINGS    ->booking done by customers.
+#After success full login of admin.the page redirects to dash board.
+   *Navigation links has dashboard,buses,travel agency,settings[sublist routes,citie].
